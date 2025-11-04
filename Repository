@@ -1,0 +1,16 @@
+package com.example.todo.repository;
+
+import com.example.todo.entity.Todo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+/**
+ * This is the "Repository" (replaces the DAO).
+ * By extending JpaRepository, Spring Data JPA gives us
+ * save(), findById(), findAll(), deleteById(), etc.
+ * FOR FREE.
+ */
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long> {
+    // We don't even need to write any code here.
+}
